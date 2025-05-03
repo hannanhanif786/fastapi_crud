@@ -6,8 +6,7 @@ from fastapi import Depends
 DATABASE_URL = config("DATABASE_URL")
 # "mysql+pymysql://<username>:<password>@<host>/<database_name>"
 
-connect_args = {"check_same_thread": False}
-engine = create_engine(DATABASE_URL, connect_args=connect_args)
+engine = create_engine(DATABASE_URL, echo=True)
 
 
 def get_session():

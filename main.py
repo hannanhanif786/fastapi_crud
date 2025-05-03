@@ -2,7 +2,8 @@ import uvicorn
 from fastapi import FastAPI
 from user import user_view
 
-app = FastAPI()
+app = FastAPI(title="FastApi-CRUD")
+
 app.include_router(user_view.router, prefix="/user", tags=["user"])
 
 if __name__ == "__main__":
