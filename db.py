@@ -5,6 +5,7 @@ from fastapi import Depends
 
 DATABASE_URL = config("DATABASE_URL")
 # "mysql+pymysql://<username>:<password>@<host>/<database_name>"
+# f"postgresql://postgres:Password@localhost:5432/fastapi_crud"
 
 engine = create_engine(DATABASE_URL, echo=True)
 
